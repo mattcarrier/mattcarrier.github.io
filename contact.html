@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Jarvis</title>
+<meta name="description" content="Send a question about Jarvis or its privacy policy.">
+<style>
+  :root {
+    --bg: #fbfaf8; --fg: #1c1b19; --muted: #5d5a54;
+    --rule: #e2ded7; --accent: #3a5a78;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16150f; --fg: #eceae4; --muted: #a09c92;
+            --rule: #302d26; --accent: #8fb3d0; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+  .sub { color: var(--muted); margin: 0 0 2.5rem; font-size: 1.05rem; }
+  p { margin: 0 0 1rem; }
+  a { color: var(--accent); }
+  .go {
+    display: inline-block; margin: 1.5rem 0 .75rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .95rem; letter-spacing: .02em; text-decoration: none;
+    padding: .7rem 1.5rem; border-radius: 4px;
+    color: var(--bg); background: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .go:hover { background: color-mix(in srgb, var(--accent) 85%, var(--fg)); }
+  .note { color: var(--muted); font-size: .9rem;
+          font-family: ui-sans-serif, system-ui, sans-serif; }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: .9rem;
+           font-family: ui-sans-serif, system-ui, sans-serif; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Contact</h1>
+  <p class="sub">Questions about Jarvis or its privacy policy.</p>
+
+  <p>Messages are received through a Google Form. It opens on Google's own site
+  rather than being embedded here, so this page loads nothing from a third party
+  and sets no cookies. Google receives whatever you type into the form,
+  including any address you give for a reply.</p>
+
+  <p><a class="go" href="https://docs.google.com/forms/d/e/1FAIpQLSc5hBfaUwkpEpRmgOnE4Nibq6utLH7ZoUvs9Or2ck4EFST5Yw/viewform">Open the contact form →</a></p>
+
+  <p class="note">The form opens at docs.google.com.</p>
+
+  <footer><a href="index.html">← Back</a></footer>
+</main>
+</body>
+</html>
