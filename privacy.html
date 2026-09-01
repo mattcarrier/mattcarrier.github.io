@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Jarvis</title>
+<meta name="description" content="How Jarvis handles Google user data: read-only access, local storage, no sharing, and how to revoke.">
+<style>
+  :root {
+    --bg: #fbfaf8; --fg: #1c1b19; --muted: #5d5a54;
+    --rule: #e2ded7; --accent: #3a5a78;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16150f; --fg: #eceae4; --muted: #a09c92;
+            --rule: #302d26; --accent: #8fb3d0; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+  .meta { color: var(--muted); margin: 0 0 2.5rem; font-size: .95rem;
+          font-family: ui-sans-serif, system-ui, sans-serif; }
+  h2 { font-size: 1.05rem; margin: 2.5rem 0 .75rem; letter-spacing: .02em;
+       text-transform: uppercase; font-family: ui-sans-serif, system-ui, sans-serif; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .45rem; }
+  a { color: var(--accent); }
+  code { font: .9em ui-monospace, SFMono-Regular, Menlo, monospace;
+         background: color-mix(in srgb, var(--fg) 7%, transparent);
+         padding: .1em .35em; border-radius: 3px; }
+  .callout { border-left: 3px solid var(--accent); padding: .1rem 0 .1rem 1rem;
+             margin: 1.5rem 0; color: var(--fg); }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: .9rem;
+           font-family: ui-sans-serif, system-ui, sans-serif; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Jarvis · Effective 1 September 2026</p>
+
+  <p>Jarvis is a single-user personal knowledge agent operated by one individual
+  on their own hardware. It is not offered to the public as a product or service.
+  This policy describes what data the application accesses, why, where it is
+  stored, and how access is withdrawn.</p>
+
+  <h2>Who this covers</h2>
+  <p>The only user of this application is its operator. No other person's Google
+  account is connected to it, and the application does not collect data from
+  visitors to this website. This site serves two static pages and sets no
+  cookies, runs no analytics, and embeds no third-party scripts or fonts.</p>
+
+  <h2>Google user data accessed</h2>
+  <p>With the operator's explicit OAuth consent, the application requests these
+  scopes, all of which are read-only:</p>
+  <ul>
+    <li><code>openid</code> and <code>email</code> — to identify which Google
+      account the stored credential belongs to</li>
+    <li><code>gmail.readonly</code> — to read message and thread content so it
+      becomes searchable and so outstanding commitments can be surfaced</li>
+    <li><code>calendar.readonly</code> — to read events, times, locations, and
+      attendees</li>
+    <li><code>contacts.readonly</code> — to resolve senders and attendees to the
+      correct people</li>
+  </ul>
+  <div class="callout">
+    The application holds no write, modify, send, or delete permission for any
+    Google service. It is technically incapable of altering the contents of the
+    connected account.
+  </div>
+
+  <h2>Why it is accessed</h2>
+  <p>Solely to build and maintain the operator's own private, searchable record
+  of their correspondence, schedule, and contacts. The data is not used for
+  advertising, profiling, resale, market research, model training, or any purpose
+  beyond serving the operator directly.</p>
+
+  <h2>How it is stored</h2>
+  <ul>
+    <li>Message, event, and contact content is stored in a database on the
+      operator's own machine. It is not uploaded to any hosted service.</li>
+    <li>OAuth access and refresh tokens are stored in a local credential file
+      readable only by the operator's own user account.</li>
+    <li>No copy of any of it is transmitted to the application's developer,
+      because there is no server to transmit it to.</li>
+  </ul>
+
+  <h2>Sharing and disclosure</h2>
+  <p>Google user data is never sold, rented, traded, or transferred to any third
+  party. It is not shared with advertisers, data brokers, or analytics providers.
+  No human other than the operator has access to it.</p>
+
+  <div class="callout">
+    Jarvis's use and transfer of information received from Google APIs adheres to
+    the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+    API Services User Data Policy</a>, including its Limited Use requirements.
+  </div>
+
+  <h2>Retention and deletion</h2>
+  <p>Data is retained locally for as long as the operator finds it useful, and is
+  deleted whenever they choose to delete it. Because storage is local, deletion
+  is complete and immediate — removing the local database removes every copy.</p>
+
+  <h2>Revoking access</h2>
+  <p>The operator may revoke this application's access at any time at
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+  Revocation immediately invalidates the stored tokens and halts all further
+  reading. Any data already stored locally is then removed by deleting the local
+  database.</p>
+
+  <h2>Security</h2>
+  <p>Credentials are stored with owner-only file permissions on an operator-controlled
+  machine and are never committed to source control. The application communicates
+  with Google over TLS. Because it exposes no public network service, there is no
+  remote attack surface reachable by third parties.</p>
+
+  <h2>Children</h2>
+  <p>This application is not directed at children and is used only by its adult
+  operator.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the revised version is published on this page with an
+  updated effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy:
+  <a href="mailto:SUPPORT_EMAIL_HERE">SUPPORT_EMAIL_HERE</a></p>
+
+  <footer><a href="index.html">← Back</a></footer>
+</main>
+</body>
+</html>

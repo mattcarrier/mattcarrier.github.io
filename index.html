@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jarvis — a personal knowledge agent</title>
+<meta name="description" content="Jarvis is a single-user personal knowledge agent that keeps a private, searchable record of its operator's own email, calendar, and contacts.">
+<style>
+  :root {
+    --bg: #fbfaf8; --fg: #1c1b19; --muted: #5d5a54;
+    --rule: #e2ded7; --accent: #3a5a78;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16150f; --fg: #eceae4; --muted: #a09c92;
+            --rule: #302d26; --accent: #8fb3d0; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+  .sub { color: var(--muted); margin: 0 0 2.5rem; font-size: 1.05rem; }
+  h2 { font-size: 1.1rem; margin: 2.5rem 0 .75rem; letter-spacing: .02em;
+       text-transform: uppercase; font-family: ui-sans-serif, system-ui, sans-serif; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  a { color: var(--accent); }
+  code { font: .9em ui-monospace, SFMono-Regular, Menlo, monospace;
+         background: color-mix(in srgb, var(--fg) 7%, transparent);
+         padding: .1em .35em; border-radius: 3px; }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: .9rem;
+           font-family: ui-sans-serif, system-ui, sans-serif; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Jarvis</h1>
+  <p class="sub">A personal knowledge agent. One operator, one machine, no third parties.</p>
+
+  <p>Jarvis is a private assistant that maintains a searchable record of its
+  operator's own working life — correspondence, commitments, meetings, projects,
+  and the people attached to them — so that context does not have to be
+  re-explained from memory every time it is needed.</p>
+
+  <p>It is not a product, a service, or a hosted platform. It is a single-user
+  application run by one person on their own hardware, built on the open-source
+  <a href="https://github.com/garrytan/gbrain">gbrain</a> knowledge-base runtime.
+  There are no accounts to create and nothing to sign up for.</p>
+
+  <h2>What it connects to</h2>
+  <p>With the operator's explicit consent, Jarvis reads three Google services on
+  a <strong>read-only</strong> basis:</p>
+  <ul>
+    <li><strong>Gmail</strong> — so that threads become searchable pages and open
+      commitments can be surfaced</li>
+    <li><strong>Google Calendar</strong> — so that events carry their attendees,
+      locations, and preparation context</li>
+    <li><strong>Google Contacts</strong> — so that senders and attendees resolve
+      to the right people</li>
+  </ul>
+  <p>Jarvis never writes to, modifies, or deletes anything in a Google account.
+  The permissions it requests do not permit it to.</p>
+
+  <h2>Where the data lives</h2>
+  <p>Everything Jarvis reads is stored locally, in a database on the operator's
+  own machine. Nothing is transmitted to Jarvis's developer, uploaded to a
+  hosted service, sold, or shared. Access tokens are held in a local credential
+  vault readable only by the operator's user account.</p>
+
+  <h2>Privacy</h2>
+  <p>The full policy, including how Google user data is handled and how access is
+  revoked, is here: <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <footer>
+    Operated privately by an individual. Contact:
+    <a href="mailto:SUPPORT_EMAIL_HERE">SUPPORT_EMAIL_HERE</a>
+  </footer>
+</main>
+</body>
+</html>
